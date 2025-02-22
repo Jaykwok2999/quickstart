@@ -1,4 +1,4 @@
-name: Update.linkease
+name: Update.iStore
 on: 
   repository_dispatch:
   workflow_dispatch:
@@ -52,6 +52,14 @@ jobs:
         rm -rf ./linkease/nas-packages/network
         rm -rf ./linkease/nas-packages/.git
         rm -rf ./linkease/nas-packages/README.md
+        
+        git clone https://github.com/linkease/istore ./linkease/iStore
+        mv ./linkease/iStore/luci/*  ./linkease/luci/
+        rm -rf ./linkease/iStore
+
+        git clone https://github.com/linkease/istore-ui ./linkease/istore-ui
+        mv ./linkease/istore-ui/app-store-ui ./linkease/luci/
+        rm -rf ./linkease/istore-ui
         
     - name: Apply
       run: |
