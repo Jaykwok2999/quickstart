@@ -34,15 +34,15 @@ jobs:
     - name: Update
       run: |
 
-        # rm -rf ./linkease/*
-        
+        rm -rf ./linkease
+        rm -rf ./diy
         
          
         # git clone https://github.com/linkease/nas-packages-luci ./linkease/nas-packages-luci
         # mv ./linkease/nas-packages-luci/luci ./linkease/
         # rm -rf ./linkease/nas-packages-luci
         # rm -rf ./linkease/luci/luci-app-quickstart/htdocs/luci-static/quickstart/index.js
-        cp -af ./linkease/nas-packages ./
+        # cp -af ./linkease/nas-packages ./
         # sed -i 's/services/nas/g' linkease/luci/luci-app-linkease/luasrc/controller/linkease.lua
         # sed -i 's/services/nas/g' linkease/luci/luci-app-linkease/luasrc/view/linkease_status.htm
         # git clone https://github.com/linkease/nas-packages ./linkease/nas-packages
